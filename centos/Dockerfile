@@ -1,7 +1,7 @@
 FROM centos:7
 RUN yum makecache fast \
     && yum -y groupinstall "development tools" \
-    && yum -y install wget ncurses-devel centos-release-scl openssl-devel elfutils-libelf-devel \
+    && yum -y install wget ncurses-devel centos-release-scl openssl openssl-devel elfutils-libelf-devel \
     && yum -y install devtoolset-9-toolchain \
     && yum clean all \
     && rm -rf /var/cache/yum
