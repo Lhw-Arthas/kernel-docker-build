@@ -8,4 +8,4 @@ tar -xvf linux-${LINUX_VERSION}.tar.xz
 cd /root/linux-${LINUX_VERSION}
 cp /root/config/config /root/linux-${LINUX_VERSION}/.config
 make CROSS_COMPILE=aarch64-linux-gnu- ARCH=arm64 rpm-pkg -j${CPUS}
-cp /root/rpmbuild/RPMS/x86_64/*.rpm /root/outkernelrpm
+cp /root/rpmbuild/RPMS/aarch64/*.rpm /root/outkernelrpm
